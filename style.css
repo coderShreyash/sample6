@@ -1,0 +1,412 @@
+body{
+    overflow-x: hidden;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+.sec1 {
+ z-index: -1;
+}
+.leaf div{
+    z-index: 20;
+}
+.bborder{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    height: 60%;
+    transform: translate(-50%,-50%);
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.3);
+}
+.frame{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    height: 60%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255,255,255,0.3);
+    border: 2px solid black;
+
+}
+.ntext{
+    z-index: 9;
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    width: 50%;
+    height: 60%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    height: auto;
+
+}
+
+.b1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("butterfly1.gif");
+    background-size: cover;
+    animation: fly1 10s linear infinite;
+    z-index: 1;
+}
+@keyframes fly1{
+0%{
+    top: 0;
+    left: 0;
+}
+25%{
+    top: 45%;
+    left: 20%;
+}
+50%{
+    top: 30%;
+    left: 40%;
+}
+70%{
+    top: 20%;
+    left: 65%;
+}
+100%{
+    top: 50%;
+    left: 100%;
+}
+}
+
+.b2{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("butterfly2.gif");
+    background-size: cover;
+    animation: fly2 10s linear infinite;
+    z-index: 1;
+}
+@keyframes fly2{
+0%{
+    top: 0;
+    right: 0;
+}
+25%{
+    top: 50%;
+    right: 20%;
+}
+50%{
+    top: 20%;
+    right: 50%;
+}
+75%{
+    top: 50%;
+    right: 75%;
+}
+100%{
+    top: 80%;
+    right: 100%;
+}
+}
+
+.bamboo{
+    position: fixed;
+    margin-left: -18vw;
+    margin-top: -6vh;
+    width:30vw;
+    height:106vh;
+    background-image: url("bamboo2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 15;
+}
+
+
+@keyframes wave {
+    0%,100%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(15deg);
+    }
+}
+
+
+.leaf{
+    position:absolute ;
+    width:100%;
+    height:100%;
+    top:100%;
+    left:0;
+}
+.leaf div{
+position:absolute ;
+display:block ;
+
+}
+.leaf div img{
+    width: 75px;
+    height: 75px;
+
+    }
+.leaf div:nth-child(1){
+    left:20%; 
+    animation:fall 13s linear infinite ;
+    animation-delay:-2s;
+
+}
+.leaf div:nth-child(2){
+    left:70%; 
+    animation:fall 12s linear infinite ;
+    animation-delay:-4s;
+}
+.leaf div:nth-child(3){
+    left:10%; 
+    animation:fall 20s linear infinite ;
+    animation-delay:-7s;
+    
+}
+.leaf div:nth-child(4){
+    left:50%; 
+   animation:fall 18s linear infinite ; 
+   animation-delay:-5s;
+}
+.leaf div:nth-child(5){
+    left:85%; 
+    animation:fall 14s linear infinite ;
+    animation-delay:-5s;
+}
+.leaf div:nth-child(6){
+    left:15%; 
+    animation:fall 16s linear infinite ;
+    animation-delay:-10s;
+}
+.leaf div:nth-child(7){
+    left:90%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-4s;
+}
+
+@keyframes fall{
+    0%{
+        opacity:1;
+        top:-90%;
+        transform: rotateZ(0deg);
+    }
+    20%{
+        opacity:0.8;
+        transform: rotateZ(45deg);
+    }
+    40%{
+
+        transform: rotateZ(90deg);
+    }
+    60%{
+        
+       transform: rotateZ(135deg); 
+    }
+    80%{
+    
+        transform: rotateZ(180deg);
+    }
+    100%{
+        top:-10%;
+        transform: rotateZ(225deg);
+    }
+    }
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        top:0;
+    }
+    
+#learn a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+
+
+#learn a:hover {
+    color: #255784;
+    background: #2196f3;
+    text-shadow: 2px 2px 5px white,2px 2px 10px white,2px 2px 15px white;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+
+#learn a span {
+    position: absolute;
+    display: block;
+}
+
+
+
+
+#learn a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+
+
+#learn a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+
+#learn a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+#learn a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+
+#learn a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+#learn a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+
+
+#learn a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+#learn a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.header{
+    z-index: 12;
+    overflow-x: hidden;
+    background:white;
+    margin-top:-10px;
+    height: 10%;
+    padding-left: 6%;
+    width: 100%;
+    background:linear-gradient(rgb(153, 243, 153),rgb(0, 255, 0));
+}
+.listl{
+    margin-right: 10%;
+}
+.listl li{
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 10px;
+    font-weight: bold;
+    color:  #2977e5;
+    font-size: 2vw;
+  list-style: none;
+}
+
+.listl li a{
+  text-decoration: none;
+word-spacing: 2.5px;
+}
+.listr li{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 16px;
+    font-weight: bold;
+    color:  #05449d;;
+    font-size:2.5vw;
+    list-style: none;
+}
+
+.alltrees{
+    display: grid;
+    width: 35%;
+    margin:0 auto;
+     grid-template-columns: repeat(2, 200px);
+     text-align: center;
+      }
+
+@media screen and (max-width:700px) {
+    h1{
+        font-size: x-large;
+    }
+    h3{
+        font-size: medium;
+    }
+    .bamboo{
+        position: absolute;
+        margin-left: -5vw;
+        margin-top: -6vh;
+        width:20%;
+        height:106vh;
+        background-image: url("bamboo1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .leaf div img{
+        width: 35px;
+        height: 35px;
+        }
+        .alltrees{
+            display: grid;
+            width: 100%;
+            margin-left:-25px ;
+             grid-template-columns: repeat(2, 200px);
+             text-align: center;
+              }
+              .alltrees div img{
+                width: 100px;
+                height: 100px;
+              }
+              #learn{
+                height: fit-content;
+              }
+}
+
+#learn{
+    border: 20px double black;
+    padding:20px;
+  
+}
+#learn h1{
+    font-size: xx-large;
+}
